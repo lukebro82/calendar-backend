@@ -1,6 +1,11 @@
 # Calendar Backend API
 
+## URL
+
+https://calendar-backend-wsxn.onrender.com
+
 ## Descripción
+
 Esta es la API backend para una aplicación de calendario que permite a los usuarios autenticarse y gestionar sus eventos. La API está construida con TypeScript y utiliza MongoDB como base de datos.
 
 ## Características
@@ -37,11 +42,13 @@ Esta es la API backend para una aplicación de calendario que permite a los usua
 ## Instalación
 
 1. Clonar el repositorio:
+
 ```bash
 git clone [url-del-repositorio]
 ```
 
 2. Instalar dependencias:
+
 ```bash
 npm install
 # o
@@ -49,7 +56,8 @@ yarn install
 ```
 
 3. Configurar variables de entorno:
-Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+   Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+
 ```
 DB_CNN=tu_conexion_mongodb
 SECRET_JWT_SEED=tu_secreto_jwt
@@ -59,6 +67,7 @@ PORT=4000
 ## Uso
 
 1. Iniciar el servidor:
+
 ```bash
 npm run dev
 # o
@@ -68,11 +77,13 @@ yarn dev
 2. Endpoints disponibles:
 
 ### Autenticación
+
 - `POST /api/auth/new` - Crear nuevo usuario
 - `POST /api/auth/` - Login de usuario
 - `GET /api/auth/renew` - Renovar token (requiere token válido)
 
 ### Eventos (requieren token JWT)
+
 - `GET /api/events/` - Obtener todos los eventos
 - `POST /api/events/` - Crear nuevo evento
 - `PUT /api/events/:id` - Actualizar evento existente
