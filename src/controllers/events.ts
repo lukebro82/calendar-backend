@@ -93,14 +93,14 @@ export const deleteEvent = async (
 
     return { message: "Event deleted successfully" };
   } catch (error) {
-    console.error(error, "Error updating event");
+    console.error(error, "Error deleting event");
 
     if (error && typeof error === "object" && "statusCode" in error) {
       throw error;
     }
 
     throw new Error(
-      error instanceof Error ? error.message : "Error updating event"
+      error instanceof Error ? error.message : "Error deleting event"
     );
   }
 };
